@@ -1,0 +1,38 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#TypeOfTraveller" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#SeatType" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Rating" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Origin" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Passenger" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#EconomyClass" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#BusinessClass" "-526de8e4:18f40d5f290:-7ffb" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Country" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióMitja" "-526de8e4:18f40d5f290:-7ffa" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Recommended" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Wifi" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióExcelent" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióSuspesa" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Verified" "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Destination" ; /*classes style*/
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#rating" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Destination" [ label = "owl:complementOf" ];
+	"NULL" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Origin" [ label = "owl:complementOf" ];
+	"NULL" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#dateOfFlight" [ label = "owl:onProperty" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióMitja" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióSuspesa" [ label = "owl:disjointWith" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerType" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#datePublished" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightRecomended" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#id" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#BusinessClass" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#EconomyClass" [ label = "owl:disjointWith" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#dateOfFlight" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Destination" -> "-526de8e4:18f40d5f290:-7ffb" [ label = "owl:equivalentClass" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióExcelent" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióSuspesa" [ label = "owl:disjointWith" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióExcelent" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióMitja" [ label = "owl:disjointWith" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Origin" -> "-526de8e4:18f40d5f290:-7ffa" [ label = "owl:equivalentClass" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#classEconomyPassengers" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightAverageRating" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightVerified" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#wifiContract" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerCountry" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Rating" -> "xsd:decimal" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#hasValue" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#TypeOfTraveller" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerType" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Verified" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightVerified" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Wifi" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#wifiContract" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review" -> "xsd:dateTime" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#datePublished" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Rating" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightAverageRating" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Country" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerCountry" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Passenger" -> "xsd:dateTime" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#dateOfFlight" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review" -> "xsd:integer" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#id" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review" -> "xsd:decimal" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#rating" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Recommended" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightRecomended" ];
+	"http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight" -> "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#SeatType" [ label = "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#classEconomyPassengers" ];
+
+}
