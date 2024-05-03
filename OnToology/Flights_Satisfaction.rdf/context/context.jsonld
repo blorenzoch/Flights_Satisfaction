@@ -1,0 +1,140 @@
+{
+  "@context" : {
+    "Verified" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Verified"
+    },
+    "TypeOfTraveller" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#TypeOfTraveller"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review"
+    },
+    "flightVerified" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightVerified",
+      "@type" : "@id"
+    },
+    "ValoracióExcelent" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióExcelent"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Country"
+    },
+    "ValoracióMitja" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióMitja"
+    },
+    "Comment" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Comment"
+    },
+    "passengerType" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerType",
+      "@type" : "@id"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Recommended"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "DatePublished" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#DatePublished"
+    },
+    "hasValue" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#hasValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Title"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "author" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#author"
+    },
+    "DateOfFlight" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#DateOfFlight"
+    },
+    "flightAverageRating" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightAverageRating",
+      "@type" : "@id"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Destination"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Origin"
+    },
+    "id" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "flightRecomended" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightRecomended",
+      "@type" : "@id"
+    },
+    "wifiContract" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#wifiContract",
+      "@type" : "@id"
+    },
+    "Wifi" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Wifi"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Passenger"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Rating"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Aircraft"
+    },
+    "ValoracióSuspesa" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióSuspesa"
+    },
+    "datePublished" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#datePublished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight"
+    },
+    "passengerCountry" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerCountry",
+      "@type" : "@id"
+    },
+    "EconomyClass" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#EconomyClass"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "rating" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#rating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "BusinessClass" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#BusinessClass"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#SeatType"
+    },
+    "dateOfFlight" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#dateOfFlight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "classEconomyPassengers" : {
+      "@id" : "http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#classEconomyPassengers",
+      "@type" : "@id"
+    }
+  }
+}

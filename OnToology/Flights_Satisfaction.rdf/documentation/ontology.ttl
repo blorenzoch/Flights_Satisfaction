@@ -1,0 +1,307 @@
+@prefix : <http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#> .
+
+<http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction> rdf:type owl:Ontology ;
+                                                                           rdfs:author "blorenzoch" ;
+                                                                           rdfs:comment "Enquestes realitzades per a la valoració de la satisfacció dels passatgers en els vols realitzats per les aerolínies Qatar Airways i Ryanair." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#author
+rdfs:author rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#classEconomyPassengers
+:classEconomyPassengers rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdf:type owl:AsymmetricProperty ;
+                        rdfs:domain :Flight ;
+                        rdfs:range :SeatType ;
+                        rdfs:comment "Number of passengers who have booked Economy class" ;
+                        rdfs:label "classEconomyPassengersPerFlight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightAverageRating
+:flightAverageRating rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdf:type owl:AsymmetricProperty ;
+                     rdfs:domain :Flight ;
+                     rdfs:range :Rating ;
+                     rdfs:comment "Average rating of the flight, taking into account the rating made by all passengers who have rated the flight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightRecomended
+:flightRecomended rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:AsymmetricProperty ;
+                  rdfs:domain :Flight ;
+                  rdfs:range :Recommended ;
+                  rdfs:comment "Number of flight recommendations" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#flightVerified
+:flightVerified rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:AsymmetricProperty ;
+                rdfs:domain :Flight ;
+                rdfs:range :Verified ;
+                rdfs:comment "Number of flight verifications." .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerCountry
+:passengerCountry rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:AsymmetricProperty ;
+                  rdfs:domain :Flight ;
+                  rdfs:range :Country ;
+                  rdfs:comment "Nationalities registered on a flight." ;
+                  rdfs:label "CountriesPerFlight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#passengerType
+:passengerType rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:AsymmetricProperty ;
+               rdfs:domain :Flight ;
+               rdfs:range :TypeOfTraveller ;
+               rdfs:comment "Number of passengers traveling as a couple per flight." ;
+               rdfs:label "CouplePassengersPerFlight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#wifiContract
+:wifiContract rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:AsymmetricProperty ;
+              rdfs:domain :Review ;
+              rdfs:range :Wifi ;
+              rdfs:comment "Number of passengers who have contracted wi-fi." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#dateOfFlight
+:dateOfFlight rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Passenger ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#datePublished
+:datePublished rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Review ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Rating ;
+          rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdf:type owl:FunctionalProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#rating
+:rating rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Review ;
+        rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:subClassOf :Flight ;
+          rdfs:comment "Unique alphanumeric code that identifies the flight" ;
+          rdfs:label "flight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#BusinessClass
+:BusinessClass rdf:type owl:Class ;
+               rdfs:subClassOf :SeatType ;
+               owl:disjointWith :EconomyClass ;
+               rdfs:comment "High price rate type" ;
+               rdfs:label "BusinessClass" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Comment
+:Comment rdf:type owl:Class ;
+         rdfs:subClassOf :Review ;
+         rdfs:comment "Text of the review" ;
+         rdfs:label "Comment" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Passenger ;
+         rdfs:comment "Nationality of the passenger" ;
+         rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#DateOfFlight
+:DateOfFlight rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dateOfFlight ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+              rdfs:subClassOf :Passenger ;
+              rdfs:comment "Date when the passenger travels" ;
+              rdfs:label "DateOfFlight" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#DatePublished
+:DatePublished rdf:type owl:Class ;
+               rdfs:subClassOf :Review ;
+               rdfs:comment "Review publication date" ;
+               rdfs:label "DatePublished" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Destination
+:Destination rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:complementOf :Origin
+                                 ] ;
+             rdfs:subClassOf :Flight ;
+             rdfs:comment "Flight destination airport" ;
+             rdfs:label "Destination" ;
+             rdfs:sameAs "http://dbpedia.org/ontology/Airport" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#EconomyClass
+:EconomyClass rdf:type owl:Class ;
+              rdfs:subClassOf :SeatType ;
+              rdfs:comment "Low price rate type" ;
+              rdfs:label "EconomyClass" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:comment "Distance an aeroplane travels without landing and is identified by a unique alphanumeric code, that is accompanied by the company name, the date, the origin and the destination of the flight in order to have a unique identification." ;
+        rdfs:label "Flight" ;
+        rdfs:sameAs "http://dbpedia.org/ontology/Airline" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Origin
+:Origin rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:complementOf :Destination
+                            ] ;
+        rdfs:subClassOf :Flight ;
+        rdfs:comment "Flight origin airport" ;
+        rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "Traveler than uses the plane as transportation" ;
+           rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :Review ;
+        rdfs:comment "Numerical rating made by the passenger about the flight" ;
+        rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Recommended
+:Recommended rdf:type owl:Class ;
+             rdfs:subClassOf :Review ;
+             rdfs:comment "Indicates if the passenger recommends the flight or not" ;
+             rdfs:label "Recommended" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        rdfs:comment "Text written by the passenger giving their opinion about the flight" ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :Passenger ;
+          rdfs:comment "Type of seat that the passenger has chosen according to the fare paid" ;
+          rdfs:label "SeatType" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Title
+:Title rdf:type owl:Class ;
+       rdfs:subClassOf :Review ;
+       rdfs:comment "Title of the review" ;
+       rdfs:label "Title" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#TypeOfTraveller
+:TypeOfTraveller rdf:type owl:Class ;
+                 rdfs:subClassOf :Passenger ;
+                 rdfs:comment "Type of passenger, which includes individual passenger, couple, family, etc." ;
+                 rdfs:label "TypeOfTraveller" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióExcelent
+:ValoracióExcelent rdf:type owl:Class ;
+                   rdfs:subClassOf :Rating ;
+                   owl:disjointWith :ValoracióMitja ,
+                                    :ValoracióSuspesa ;
+                   rdfs:comment "The flight obtains an excellent value if it has a rating greater than 8" ;
+                   rdfs:label "ExcellentValue" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióMitja
+:ValoracióMitja rdf:type owl:Class ;
+                rdfs:subClassOf :Rating ;
+                owl:disjointWith :ValoracióSuspesa ;
+                rdfs:comment "The flight obtains a medium value if it has a rating between 5 and 8" ;
+                rdfs:label "MediumValue" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#ValoracióSuspesa
+:ValoracióSuspesa rdf:type owl:Class ;
+                  rdfs:subClassOf :Rating ;
+                  rdfs:comment "The flight obtains a failed value if it has a rating lower than 5" ;
+                  rdfs:label "FailValue" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Verified
+:Verified rdf:type owl:Class ;
+          rdfs:subClassOf :Flight ;
+          rdfs:comment "Indicates if the flight is verified or not" ;
+          rdfs:label "Verified" .
+
+
+###  http://www.semanticweb.org/blore/ontologies/2024/3/Flights_Satisfaction#Wifi
+:Wifi rdf:type owl:Class ;
+      rdfs:subClassOf :Passenger ;
+      rdfs:comment "Indicates if the passenger has contract the Wi-Fi service" ;
+      rdfs:label "Wifi" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
